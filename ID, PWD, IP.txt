@@ -1,0 +1,115 @@
+# 아이디 패스워드
+
+내부망
+ID	: 사번
+PWD	: 사번
+
+
+
+인터넷
+ID	:사번
+PWD	: qwer1234!
+
+
+
+우리포털, 우리 메신저
+ID	: e6사번
+PWD	: 주민번호 앞자리
+
+
+
+NAC
+ID	: 사번
+PWD	: 사번
+	(관리자)
+	172.17.182.2:8443(#뒤에주소 있음)
+	ID	:사번
+	PWD	:사번	
+
+
+
+DRM
+ID	: 사번
+PWD	: 사번
+	(TEST)
+	ID	: test2
+	PWD	: test2
+
+
+
+통합단말(중앙의 프로그램)
+ID		: 사번 
+PWD		: 사번[@최우창96@
+단말번호	: IP당 고유 단말번호
+지점		: 지점 코드(90 경영지원)
+은행코드	: 403
+
+
+개인금융
+ID	: 사번
+PWD	: 1234567*
+	포이시스 관리자(TEST)
+	#tadmin
+	ID	: 99901
+	PWD	: foresys#@1
+
+
+
+외부 메일 주소(인터넷)
+192.168.33.9
+ID	: 사번
+PWD	: 사번
+
+
+
+저축은행 관리자모드
+관리자 화면: www.woorisavingsbank.com/admin/login.do
+관리자 화면: m.woorisavingsbank.com/admin/login.do
+ID	: admin
+PWD	: ajusb123
+
+
+
+공유폴더 
+\\172.17.181.239
+ID	: ajusb
+PWD	: 아주저축1@
+
+
+
+웹펙스
+172.17.181.240
+(관리자)
+ID	: system
+PWD	: gms0258!
+(사용자)
+ID	: 사번
+PWD	: a12345
+
+
+
+ITBOT
+IP	: 172.17.182.190
+	NAC
+	ID	: 180000
+	PWD	: #1234qwer! or qwer1234!
+	통합단말
+	ID	: 180000
+	PWD	: 1q2w3e4r!
+
+
+
+RDM
+ID	: risman
+PWD	: woori1142!~
+
+
+
+DB
+ID	: hnfils01
+PWD	: hnhot601
+
+
+
+
+

@@ -1,0 +1,41 @@
+#배치프로그램
+SBRDM.BAT =>  script = [쉘 파일]
+SBRDM.BAT =>  script => logs = [로그]
+
+
+%1. 일 배치
+
+아침에 확인 할 것
+(중앙회에서 데이터가 제때 들어오지 않으면 자동으로 실행하는 배치 프로그램이 오류가 생길 수 있어서 수동으로 하는 방법을 배워야함)
+
+1. daily_RDM_Coeval.sh
+2. daily_RDM_PARMAS.sh yymmdd
+3. daily_ALM_total_test.sh [유동성] - RISK팀에서 수행하는 test 프로그램
+
+
+%2. 월 배치
+
+1. RISK 부서 data 입력 됐는지 확인
+
+
+2. data 적합성 확인 [monthly_RDM_Total_Chk.sh yyyymmdd] 
+monthlyRDMTotal.log(~98)
+
+ 
+3. data 생성 [monthlt_RDM_TotalTest.sh yyyymmdd ]
+monthlyRDMTotal.log(~102)
+(로그 22개 생성)
+
+4. data 전송 [monthly_RDM.sendFile.sh yyyymmdd ] 
+배치 후(putty 터미널에 완료되었다고 나옴) 우리 에프아이에 전화해서 데이터 전송이 정상적으로 완료되었는지 확인!
+(완성 = 파일 13개 적재)
+
+@ yyyymmdd는 6월자를 기준으로 요청하면 6월달 마지막 일자를 입력하여 배치프로그램에 param을 전송한다..
+@ 로그 확인 => 1. 해당 배치파일을 돌릴때 생성된 로그를 모두 열어서 (적재, 전송, SUCCESS) 여부를 확인한다 
+@ 중요한 것은 적재나 전송이나 0을하고 성공이면 안됨 # 수정이 필요하지만 파일을 가지고 있어야 할듯 success전 마지막 (데이터의 양을 보고 파악 했던걸로 기억됨)
+@ 2번과 3번 실행으로 생성되는 로그이름이 동일함 => 그래서 이전의 데이터로 비교했을때 totaltest(102.log가 마지막) chk(98.log가 마지막) 이전의 데이터는
+ 	chk가 totaltest 작업으로 사라지기 때문에 102가 마지막으로 남아 있게됨 => chk가 98라고 오류가 아니라 이전의 데이터는 chk가 사라졌기 때문에 그런것임
+
+
+%지주에 보낸 데이터 확인
+risman - data - work - old - send,recv
